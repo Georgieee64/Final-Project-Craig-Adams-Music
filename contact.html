@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Craig Adams Music about live performances, events, or music. Send Craig a message today.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Contact | Craig Adams Music</title>
+</head>
+
+<body class="about-site">
+    <header class="header">
+        <a class="branding" href="index.html" aria-label="Craig Adams Music home">
+            <img src="logo.png" alt="Craig Adams Music" class="logo">
+        </a>
+        <nav class="socials" aria-label="Social media">
+            <a href="https://www.facebook.com/CraigAdamsMusic/" aria-label="Facebook"><img src="images/fb-logo.png" alt=""></a>
+            <a href="https://www.instagram.com/hapuka_01/" aria-label="Instagram"><img src="images/inst-logo.png" alt=""></a>
+            <a href="https://www.youtube.com/@craigadamsmusic2112" aria-label="YouTube"><img src="images/yt-logo.png" alt=""></a>
+            <a href="https://open.spotify.com/artist/3CoUqJ19cVnmwrIqowen5G" aria-label="Spotify"><img src="images/spt-logo.png" alt=""></a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <nav class="page-nav" aria-label="Main navigation">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="music.html">MUSIC</a>
+            <a href="Contact.html" aria-current="page">CONTACT</a>
+            <a href="images.html">GALLERY</a>
+            <a href="Videos.html">VIDEOS</a>
+        </nav>
+
+        <section class="contact-page" aria-labelledby="contact-heading">
+            <h1 id="contact-heading">Contact Craig</h1>
+            <p>Get in touch with Craig Adams Music about live performances, events, or music.</p> 
+            <p>Send Craig a message today!</p>
+
+            <form name="contact" method="POST" data-netlify="true" class="contact-form" action="Contact.html">
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="contact-form__field">
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" type="text" name="name" autocomplete="name" required>
+                </div>
+                <div class="contact-form__field">
+                    <label for="contact-email">Your email</label>
+                    <input id="contact-email" type="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="contact-form__field">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="7" required></textarea>
+                </div>
+                <button type="submit">Send message</button>
+            </form>
+            <p class="contact-socials-heading">Follow Craig</p>
+            <nav class="socials contact-socials" aria-label="Social media">
+                <a href="https://www.facebook.com/CraigAdamsMusic/" aria-label="Facebook"><img src="images/fb-logo.png" alt=""><strong>Facebook</strong></a>
+                <a href="https://www.instagram.com/hapuka_01/" aria-label="Instagram"><img src="images/inst-logo.png" alt=""><strong>Instagram</strong></a>
+                <a href="https://www.youtube.com/@craigadamsmusic2112" aria-label="YouTube"><img src="images/yt-logo.png" alt=""><strong>YouTube</strong></a>
+                <a href="https://open.spotify.com/artist/3CoUqJ19cVnmwrIqowen5G" aria-label="Spotify"><img src="images/spt-logo.png" alt=""><strong>Spotify</strong></a>
+            </nav>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright Craig Adams Music &copy; 2026. Copyright material on this website is protected by copyright owned by Georgie Adams. Unless indicated otherwise for specific items or collections of content (either below or within specific items or collections), this copyright material is licensed for re-use under the Creative Commons Attribution / Share-Alike (CC BY-SA 4.0) International licence. In essence, you are free to copy, distribute and adapt the material, as long as you attribute it to me and abide by the other licence terms. Please note that this licence does not apply to any logos, design, images, photography, drawing, animation, emblems and trade marks on the website or to the website’s design elements, or to any other photography and imagery embedded in the website or used in the background. Those specific items may not be re-used without express permission from the website owner.</p>
+    </footer>
+</body>
+
+</html>

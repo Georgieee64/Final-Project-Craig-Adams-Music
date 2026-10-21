@@ -1,0 +1,611 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #171717;
+    color: #f7f4ef;
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+body.about-site {
+    background: linear-gradient(rgb(0 0 0 / 88%), rgb(0 0 0 / 88%)), url("bg.image.jpg") center / cover no-repeat fixed;
+}
+
+.header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 0 max(calc((100% - 1120px) / 2), 24px);
+    background: #fff;
+}
+
+.logo {
+    display: block;
+    width: 104px;
+    height: auto;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.socials a {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 50%;
+    transition: background-color 160ms ease;
+}
+
+.socials a:hover {
+    background: #f0c783;
+}
+
+.socials img {
+    display: block;
+    width: auto;
+    max-width: 27px;
+    max-height: 27px;
+}
+
+.contact-socials-heading {
+    margin: 28px 0 10px;
+    font-weight: 700;
+}
+
+.contact-socials {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.contact-socials a {
+    display: flex;
+    width: 84px;
+    min-height: 76px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.contact-socials strong {
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.main {
+    width: min(100% - 48px, 1120px);
+    margin: 0 auto;
+}
+
+.page-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 40px;
+    padding: 20px 20px;
+    background: #101010;
+}
+
+.page-nav a {
+    padding: 6px 0;
+    color: #f7f4ef;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
+    color: #f0c783;
+}
+
+.about-page {
+    display: flex;
+    align-items: stretch;
+    gap: clamp(28px, 6vw, 76px);
+    max-width: 1120px;
+    margin: 48px auto 64px;
+    padding: clamp(24px, 5vw, 56px);
+    background: #f7f4ef;
+    color: #24211f;
+}
+
+.about-page > img {
+    display: block;
+    flex: 0 0 31%;
+    width: 31%;
+    height: auto;
+    align-self: stretch;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-page-text-area {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-page h1 {
+    margin-bottom: 20px;
+    color: #754a18;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.about-page p {
+    color: #48423e;
+    font-size: 1rem;
+    line-height: 1.75;
+    white-space: pre-line;
+}
+
+.photos-page {
+    max-width: 1120px;
+    margin: 48px auto 64px;
+    padding: clamp(24px, 5vw, 56px);
+    background: #f7f4ef;
+    color: #24211f;
+}
+
+.photos-page h1 {
+    margin-bottom: 24px;
+    color: #754a18;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.contact-page {
+    max-width: 1120px;
+    min-height: 220px;
+    margin: 48px auto 64px;
+    padding: clamp(24px, 5vw, 56px);
+    background: #f7f4ef;
+    color: #24211f;
+}
+
+.contact-page h1 {
+    margin-bottom: 20px;
+    color: #754a18;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.contact-page p {
+    color: #48423e;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+body > main {
+    animation: fade-in-up 700ms ease-out both;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.music-page {
+    max-width: 1120px;
+    margin: 48px auto 64px;
+    padding: 0;
+    background: #f7f4ef;
+    color: #24211f;
+}
+
+.music-page__intro {
+    padding: clamp(24px, 4vw, 52px) clamp(24px, 4vw, 56px) 28px;
+    background: transparent;
+    color: #24211f;
+}
+
+.music-page__intro h1 {
+    margin-bottom: 12px;
+    color: #1d120b;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.music-page__intro p {
+    margin: 0;
+    color: #1d120b;
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+.music-item-feature {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(24px, 4vw, 56px);
+    align-items: start;
+    padding: clamp(24px, 4vw, 56px);
+    background: transparent;
+}
+
+.music-item-feature__cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 460px;
+    padding: 0;
+    background: #f7f4ef;
+    border: 0;
+    box-shadow: none;
+}
+
+.music-item-feature__img {
+    display: block;
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    object-fit: contain;
+    margin-top: -6px;
+}
+
+.spotify-button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background: #1db954;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.spotify-button:hover,
+.spotify-button:focus-visible {
+    background: #1aa34a;
+}
+
+.reverbnation-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 16px;
+    background: #fff;
+    color: #1d120b;
+    border: 1px solid #d8d0c7;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.reverbnation-button:hover,
+.reverbnation-button:focus-visible {
+    background: #f3e3c6;
+}
+
+.music-item-feature__copy {
+    max-width: 540px;
+}
+
+.music-item-feature__copy h2 {
+    margin: 0 0 18px;
+    color: #24211f;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(2.3rem, 3vw, 4rem);
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.music-item-feature__copy h3 {
+    margin: 0 0 18px;
+    color: #24211f;
+    font-size: clamp(1.5rem, 2vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.music-item-feature__copy p {
+    margin: 0 0 18px;
+    color: #2f2925;
+    font-size: 1.04rem;
+    line-height: 1.75;
+}
+
+.music-tracklist {
+    margin-top: 12px;
+}
+
+.music-tracklist p {
+    margin-bottom: 10px;
+}
+
+.music-tracklist ol {
+    margin: 0;
+    padding-left: 1.4rem;
+    color: #2f2925;
+    line-height: 1.8;
+}
+
+.footer {
+    background: #101010;
+    color: #f7f4ef;
+    padding: 18px 24px 30px;
+}
+
+.footer p {
+    margin: 0;
+    color: #f7f4ef;
+    line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+    .music-item-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .music-item-feature__cover {
+        min-height: 320px;
+    }
+}
+
+.contact-form {
+    display: grid;
+    max-width: 680px;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.contact-form__field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #24211f;
+    font-weight: 700;
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bcb4aa;
+    border-radius: 2px;
+    background: #fff;
+    color: #24211f;
+    font: inherit;
+}
+
+.contact-form__field textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-form__field input:focus-visible,
+.contact-form__field textarea:focus-visible {
+    outline: 3px solid #f0c783;
+    outline-offset: 2px;
+}
+
+.contact-form button {
+    justify-self: start;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 2px;
+    background: #754a18;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #5e3912;
+}
+
+.main-carousel img {
+    display: block;
+    margin-inline: auto;
+    width: auto;
+    max-width: 100%;
+    height: min(62vh, 620px);
+    object-fit: contain;
+    background: #24211f;
+}
+
+.main-carousel video {
+    display: block;
+    width: min(100%, 900px);
+    height: min(62vh, 620px);
+    margin-inline: auto;
+    object-fit: contain;
+    background: #24211f;
+}
+
+.main-carousel .carousel-cell {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption {
+    margin-top: 14px;
+    color: #48423e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.footer {
+    padding: 28px max(calc((100% - 1120px) / 2), 24px);
+    border-top: 1px solid #383431;
+    background: #101010;
+    color: #c8c2bd;
+}
+
+.footer p {
+    max-width: 1120px;
+    margin: 0 auto;
+    font-size: 0.6rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .header {
+        min-height: 68px;
+        padding: 8px 18px;
+    }
+
+    .logo {
+        width: 88px;
+    }
+
+    .socials {
+        gap: 2px;
+    }
+
+    .socials a {
+        width: 34px;
+        height: 34px;
+    }
+
+    .socials img {
+        max-width: 23px;
+        max-height: 23px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .page-nav {
+        gap: 4px 20px;
+        padding: 12px 16px;
+    }
+
+    .about-page {
+        flex-direction: column;
+        gap: 24px;
+        margin: 24px 16px 40px;
+        padding: 24px;
+    }
+
+    .photos-page {
+        margin: 24px 16px 40px;
+        padding: 24px;
+    }
+
+    .contact-page {
+        min-height: 200px;
+        margin: 24px 16px 40px;
+        padding: 24px;
+    }
+
+    .main-carousel img {
+        height: min(52vh, 480px);
+    }
+
+    .main-carousel video {
+        height: min(52vh, 480px);
+    }
+
+    .about-page > img {
+        flex: 0 0 auto;
+        width: min(100%, 230px);
+        max-width: none;
+        align-self: center;
+    }
+
+    .footer {
+        padding: 24px 20px;
+    }
+}
+
+.home-page {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    min-height: 100svh;
+    place-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #17110f url("bg.image.jpg") center 42% / cover no-repeat;
+}
+
+.home-page::before {
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(180deg, rgb(0 0 0 / 72%), rgb(0 0 0 / 64%) 48%, rgb(0 0 0 / 80%));
+    content: "";
+    inset: 0;
+}
+
+.home-content {
+    display: flex;
+    width: min(100% - 48px, 1060px);
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(28px, 5vh, 54px);
+    padding: 72px 0;
+}
+
+.home-page .logo {
+    width: min(58vw, 350px);
+    max-height: 38vh;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.home-page .page-nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px clamp(18px, 3.3vw, 44px);
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.home-page .page-nav a {
+    color: #fff;
+    font-family: "Roboto Slab", Rockwell, Georgia, serif;
+    font-size: clamp(0.95rem, 1.5vw, 1.16rem);
+    font-weight: 900;
+    line-height: 1.2;
+    text-decoration: none;
+    text-shadow: 0 2px 8px rgb(0 0 0 / 75%);
+}
+
+
+
+
